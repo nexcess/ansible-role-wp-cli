@@ -1,0 +1,19 @@
+---
+
+- name: Get / Install WP-CLI
+  get_url:
+    url="{{ wpcli_phar_url }}"
+    dest="{{ wpcli_path }}/wp"
+    mode=0755
+
+- name: Install Bash Completion Helper
+  get_url:
+    url="{{ wpcli_bash_completion_url }}"
+    dest="/etc/bash_completion.d"
+    mode=0644
+
+- name: Setup Auto-Update
+  cron:
+    name="Auto-update WP-CLI"
+    special_time="daily"
+    job="wp cli update --stable --yes --quiet"
