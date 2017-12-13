@@ -1,6 +1,6 @@
 ---
 
-wpcli_version: "1.4.0"
+wpcli_version: "1.4.1"
 wpcli_phar_url: "https://github.com/wp-cli/wp-cli/releases/download/v{{ wpcli_version }}/wp-cli-{{ wpcli_version }}.phar"
 wpcli_path: "/usr/local/bin"
 wpcli_bash_completion_url: "https://github.com/wp-cli/wp-cli/raw/master/utils/wp-completion.bash"
